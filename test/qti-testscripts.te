@@ -28,7 +28,7 @@
 userdebug_or_eng(`
   # forward declaration is done in system/sepolicy to avoid neverallow issues
   
-  # type qti-testscripts, domain, domain_deprecated, mlstrustedsubject;
+  type qti-testscripts, domain, domain_deprecated, mlstrustedsubject;
   permissive qti-testscripts;
   domain_trans(init, shell_exec, qti-testscripts)
 

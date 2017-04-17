@@ -27,4 +27,4 @@
 
 # Domain type used for debugfs access
 # (moved to system/sepolicy)
-# attribute qti_debugfs_domain;
+attribute qti_debugfs_domain;
