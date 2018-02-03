@@ -324,3 +324,6 @@ type sysfs_pon_dev, fs_type, sysfs_type;
 
 #kgsl
 type kgsl_debugfs, debugfs_type, fs_type;
+
+# power hal
+type debugfs_rpm, debugfs_type, fs_type;
