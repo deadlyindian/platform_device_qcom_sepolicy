@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,15 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# This daemon loads the Context Hub Runtime Environment (CHRE) dynamic modules
-# onto the SLPI using FastRPC, and exposes a sockets interface for clients on
-# the applications processor to interact CHRE
-type chre, domain;
-type chre_exec, exec_type, vendor_file_type, file_type;
-
-init_daemon_domain(chre)
-r_dir_file(chre, adsprpcd_file)
-
-allow chre ion_device:chr_file r_file_perms;
-allow chre qdsp_device:chr_file r_file_perms;
-allow chre dsp_device:chr_file r_file_perms;
+qmmf_system.service                            u:object_r:qmmf_system_service:s0
+qmmf_audio.service                             u:object_r:qmmf_audio_service:s0
+qmmf_recorder.service                          u:object_r:qmmf_recorder_service:s0
+qmmf_player.service                            u:object_r:qmmf_player_service:s0
+qmmf_display.service                           u:object_r:qmmf_display_service:s0
